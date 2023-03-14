@@ -8,5 +8,5 @@
 <p align="left">
   <img src="images/DevOps_meme.png" width=350/>
   <img src="images/Heart_emote.png" width=50/>
-  <img src="images/DevOps_logo.svg" width=250/>
+  <img src="images/DevOps_logo.png" width=200/>
 </p>
