@@ -24,7 +24,7 @@ This folder contains the ***install.sh*** script, an installation script to inst
         - pkg-config
         - libcppunit-dev
         - gnuplot
-        - snapd + certbot (optional)(see <a href="#path_ssl_certificate"><b>PATH_SSL_CERTIFICATE</b></a> & <a href="#path_ssl_certificate_key"><b>PATH_SSL_CERTIFICATE_KEY</b></a>)
+        - snapd + certbot (optional)(see: <a href="#path_ssl_certificate"><b>PATH_SSL_CERTIFICATE</b></a> & <a href="#path_ssl_certificate_key"><b>PATH_SSL_CERTIFICATE_KEY</b></a>)
       Configuring:
         - nginx with a nginx.conf configuration file in /etc/nginx/
         - nginx with a nginx.service service file in /etc/systemd/system/
