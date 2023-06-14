@@ -11,8 +11,8 @@ This folder contains the ***install.sh*** script, an installation script to inst
 <pre><code> -se, --setup-env
     Start by setting up the device environment
       Installing:
-        - java (see: <a href="#java_jdk_version">JAVA_JDK_VERSION</a>)
-        - postgresql (see: POSTGRESQL_VERSION)
+        - java (see: <a href="#java_jdk_version"><b>JAVA_JDK_VERSION</b></a>)
+        - postgresql (see: <a href="#postgresql_version"><b>POSTGRESQL_VERSION</b></a>)
         - nginx
         - maven
         - python
@@ -24,11 +24,11 @@ This folder contains the ***install.sh*** script, an installation script to inst
         - pkg-config
         - libcppunit-dev
         - gnuplot
-        - snapd + certbot (optional)(see )
+        - snapd + certbot (optional)(see <a href="#path_ssl_certificate"><b>PATH_SSL_CERTIFICATE</b></a> & <a href="#path_ssl_certificate_key"><b>PATH_SSL_CERTIFICATE_KEY</b></a>)
       Configuring:
         - nginx with a nginx.conf configuration file in /etc/nginx/
         - nginx with a nginx.service service file in /etc/systemd/system/
-        - create the user if it doesn't already exists (see: USER)
+        - create the user if it doesn't already exists (see: <a href="#user"><b>USER</b></a>)
     Cf. environment-setup.sh & install-ibex.sh
 </code></pre>
 
@@ -58,7 +58,7 @@ A configuration file like the one provides as an example (***values.txt***), is 
 | :---: | :---: | :---: | :---: |
 | **APP_NAME** | Application name | ✔️ |  |
 | **ENV_GITHUB** | Github environment name (staging, recette, prod, ...) | ✔️ |  |
-| **USER** | User name who will be granted permission on the application setup <br/> If the user doesn't exists it will be created | ✔️ |  |
+| **USER** <a name="user"></a> | User name who will be granted permission on the application setup <br/> If the user doesn't exists it will be created | ✔️ |  |
 | **CLIENT_FOLDER** | Folder name where the setup will occur <br /> If the folder doesn't exists it will be created <br/> ***The final folder will be in the form of:*** **CLIENT_FOLDER**/**USER**/**ENV_GITHUB**/**APP_NAME** | ✔️ |  |
 | **PATH_APP_JAR** | Path of the jar of the application | ✔️ |  |
 | **UPSTREAM_BACK** | Upstream name used in the application configuration file for nginx | ✔️ |  |
@@ -72,9 +72,9 @@ A configuration file like the one provides as an example (***values.txt***), is 
 | **PATTERN_CRON_RESTART_APP** | **Only with ENV_GITHUB=prod** <br /> Cronjob that will restart the application service | ✔️ |  |
 | **PATTERN_CRON_DELETE_DUMPS** | **Only with ENV_GITHUB=prod** <br /> Cronjob that will delete dump older than 5 days | ✔️ |  |
 | **JAVA_JDK_VERSION** <a name="java_jdk_version"></a> | JDK version *(include JRE)* | ✔️ |  |
-| **POSTGRESQL_VERSION** | Postgresql version | ✔️ |  |
-| **PATH_SSL_CERTIFICATE** | Path of the ssl certificate |  | ✔️ <br /> (let's encrypt will be used instead) |
-| **PATH_SSL_CERTIFICATE_KEY** | Path of the ssl key |  | ✔️ <br /> (let's encrypt will be used instead) |
+| **POSTGRESQL_VERSION** <a name="postgresql_version"></a> | Postgresql version | ✔️ |  |
+| **PATH_SSL_CERTIFICATE** <a name="path_ssl_certificate"></a> | Path of the ssl certificate |  | ✔️ <br /> (let's encrypt will be used instead) |
+| **PATH_SSL_CERTIFICATE_KEY** <a name="path_ssl_certificate_key"></a> | Path of the ssl key |  | ✔️ <br /> (let's encrypt will be used instead) |
 | **PATH_PG_HBA_CONF** | **Only with ENV_GITHUB=prod** <br /> Path of the pg_hba.conf to allow user connecting to the database with a password (md5) <br /> (often present in: /etc/postgresql/${version}/main/pg_hba.conf) |  | ✔️ |
 
 ### Connect with me on:
