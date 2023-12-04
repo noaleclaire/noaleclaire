@@ -8,6 +8,6 @@
 </br>
 <p align="center">
   <img src="images/DevOps_meme.png" width=350/>
-  <img src="images/Heart_emote.png" width=40/>
+  </br>
   <img src="images/DevOps_logo.png" width=240/>
 </p>
